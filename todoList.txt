@@ -1,0 +1,29 @@
+Priority: 
+- Add onAuthStateChange() | Firebase   
+---------------------------------------------------------
+- Add Responsive
+- Footer 
+- Blog
+- Portfolio (Danh Muc)        / !Finished! /
+- Our Team (Doi Ngu)          / !Finished! /
+- Children sites:                        
+  +Financial Courses
+  +Financial Advice            //   !Kind of Finished! *Add documentary children sites  //
+   >Cach Lam giau Online
+   >Cach Tiet kiem chi tieu
+
+------------------------ Main Points Of Presentation --------------------------------
+Introduction  //vvv  
+Company Overview  //vvv S2: Product Introduction  (Gioi Thieu San Pham)
+The Problem  //  S2
+Product and Solution//   S2
+Promise of Value or Benefits// S3: Benefits & Drawbacks(Loi Ich San Pham dem lai)
+Benefits & Drawbacks  //    S3
+Improvements will be made //   S3
+//   S4: Call for Change and Improvement (Loi keu goi cho mot tuong lai phat trien hon)
+Call-for-Change  // S4
+Inspiration  // S4
+Thanks for Listening and Watching // S4
+---------------------------------------------------------
+Colors:
+#aa6b39 (Brownish)

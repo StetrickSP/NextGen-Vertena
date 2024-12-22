@@ -1,0 +1,670 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+a
+{
+    text-decoration: none;
+}
+.text-secondary
+{
+    color: gold;
+}
+.text-center
+{
+    text-align: center;
+}
+.bg-light
+{
+    background: #FFFFF4;
+}
+.bg-secondary
+{
+    background: green;
+}
+.py-0{padding: 16px 0;}
+.py-1{padding: 24px 0;}
+.py-2{padding: 32px 0;}
+.py-3{padding: 48px 0;}
+
+.p-0{padding: 16px;}
+.p-1{padding: 24px;}
+.p-2{padding: 32px;}
+.p-3{padding: 48px;}
+.p-4{padding: 1px;}
+
+.wrapper
+{
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 50px;
+    flex-wrap: wrap;
+}
+/* Showcase area Styling */
+.showcase
+{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6)
+    ,rgba(0,0,0,0.6))
+    ,url('./images/background.jpg') no-repeat center center/cover;
+}
+/* Utility Classes */
+.btn   /*All btn class styling*/
+{
+    display: inline-block;
+    padding: 15px 25px;
+    margin-right: 30px;
+    margin-top: 10px;
+    text-decoration: none;
+    border-radius: 25px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    /* outline-style: solid; */
+}
+
+/* Top Navbar */
+.showcase .navbar-top
+{
+    width: 100%;
+    display: flex;
+    padding: 0 80px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    background-color: gold;
+    /* position: sticky;  */   /*Remove comment afterwards*/
+     top: 0;
+    left: 0;
+}
+
+.showcase .left
+{
+    display: flex;
+    list-style: none;
+}
+
+.showcase .left li a 
+{
+    display: inline-block;
+    font-size: 15px;
+    text-decoration: none;
+    color: #aa6b39;
+    padding: 5px 15px;
+    transition: all 0.8s ease;
+}
+.showcase .left li a:hover
+{
+    color: white;
+}
+
+.showcase .left li:first-child
+{
+    font-weight: 700;
+    border-right: 1px solid white;
+}
+
+.showcase .right
+{
+    display: flex;
+    list-style: none;
+}
+
+.showcase .right li a
+{
+    display: inline-block;
+    padding: 5px 15px;
+    text-decoration: none;
+    color: #aa6b39;
+    transition: all 0.8s ease;
+}
+.showcase .right li a:hover
+{
+    color: white;
+}
+/* Bottom Navbar */
+.showcase .navbar-bottom
+{
+    width: 100%;
+    display: flex;
+    padding: 5px 95px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    background: #aa6b39;
+    text-align: center;
+    overflow: hidden;
+    position: absolute; /*Change into fixed afterwards*/
+}
+
+.navbar-bottom.sticky
+{
+    padding: 15px 95px;
+    background: white;
+    border-bottom: 1px solid black;
+    color: black;
+    top: 0;
+    z-index: 999;
+}
+
+.showcase .navbar-bottom .brand-left
+{
+    color: gold;
+    font-size: 25px;
+    font-weight: 1000;
+    margin-bottom: 10px;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+.showcase .navbar-bottom.sticky .brand-left
+{
+    color: black;
+}
+.showcase .navbar-bottom .brand-left:hover
+{
+    color: white;
+}
+
+.showcase .navbar-bottom .menu-right
+{
+    display: flex;
+    list-style: none;
+    font-size: 14px;
+    font-weight: 500; 
+}
+.showcase .navbar-bottom.sticky .menu-right li:last-child
+{
+    display: none;
+}
+.showcase .navbar-bottom .menu-right a
+{
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 25px;
+    margin-top: 15px;
+    color: gold;
+    transition: all 0.5s ease;
+}
+.showcase .navbar-bottom .menu-right a:hover
+{
+    color: white;
+}
+
+/* Navbar Bottom search form */
+.navbar-bottom .search-form
+{
+    position: absolute;
+    top: 60%;
+    right: 10%;
+    background: white;
+    width: 350px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: all 0.5s ease;
+}
+.navbar-bottom .search-form.active
+{
+    transform: scaleY(1);
+}
+.navbar-bottom .search-form input
+{
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    border: none;
+    background: white;
+    color: black;
+    padding: 14px;
+    text-transform: none;
+    outline: none;
+}
+.navbar-bottom .search-form label
+{
+    cursor: pointer;
+    font-size: 30px;
+    border: none;
+    margin-right: 12px;
+
+}
+.navbar-bottom .search-form label:hover /*Hover -> Gold on search-form label*/
+{
+    color: gold;
+}
+
+/* Showcase content Section styling */
+.showcase .showcase-content
+{
+    max-width: 850px;
+    margin-top: 15%;
+    padding: 0 95px;
+}
+.showcase .showcase-content h1 /*h1 tag of showcase-content styling*/
+{
+    color: gold;
+    font-size: 60px;
+    margin: 15px 0;
+}
+.showcase .showcase-content span /*span tag of showcase-content styling*/
+{
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+}
+.showcase .showcase-content p /*p tag of showcase-content styling*/
+{
+    color: whitesmoke;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+.showcase .showcase-content .btn:hover /* Hover -> Gold on BTN buttons*/
+{
+    color: gold;
+}
+.showcase .showcase-content .btn-left
+{
+    background: linear-gradient(to right, #aa6b39, gold);
+}
+.showcase .showcase-content .btn-right
+{
+    background: linear-gradient(to right, gold, #aa6b39);
+}
+
+/* Services Section Styling */
+#services .items
+{
+    display: flex;
+    padding-bottom: 40px;
+}
+#services .items .item
+{
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    background: goldenrod;
+    border-radius: 5px;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.3), -5px -5px 20px rgba(0,0,0,0.3);
+    transition: all 0.8s ease;
+}
+#services .items .item h3
+{
+    color: black;
+    font-size: 20px;
+    font-weight: 600;  /*font-weight: weight of font, makes words seems thicker*/
+    margin: 5px;
+    transition: all 0.8s ease;
+}
+#services .items .item:hover h3 /* "item:hover h3" will make h3 change when hovering over item */
+{                               /* "item h3:hover" will only make h3 change when hovering over h3 only*/
+    color: goldenrod;
+    transition: all 0.8s ease;
+}
+#services .items .item p
+{
+    line-height: 1.4;
+    color: black;
+}
+#services .items .item i
+{
+    color: black;
+    transition: all 0.8s ease;
+}
+#services .items .item:hover i 
+{
+    color: gold;
+}
+#services .items .item:hover
+{
+    background: whitesmoke;
+    transform: scale(1.05);   /*scale it x1.05 times bigger*/
+    transition: all 0.8s ease;
+}
+
+/* Services Section Bottom */
+#goal
+{
+    display: flex;
+    padding-top: 20px;
+}
+#goal div
+{
+    flex: 1;
+}
+#goal .goal-img
+{
+    display: inline-block;
+    position: relative;
+    width: 600px;
+    height: 415px;
+    overflow: hidden;
+}
+#goal .goal-img img
+{
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+}
+#goal .goal-text
+{
+    margin: 0 40px;
+}
+#goal .goal-text a
+{
+    color: black;
+    background: goldenrod;
+    text-decoration: none;
+    font-size: 15px;
+    border: 1px solid black;
+    border-radius: 25px;
+    padding: 3px 10px;
+    transition: 0.8s ;
+}
+#goal .goal-text a:hover
+{
+    color: #aa6b39;
+    background: whitesmoke;
+}
+#goal .goal-text h2
+{
+    margin: 20px 0;
+    color: black;
+    font-weight: 1000;
+}
+#goal .goal-text .contents
+{
+    display: flex;
+}
+#goal .goal-text .contents .content
+{
+    flex: none;
+    padding: 10px;
+}
+#goal .goal-text .contents .content h3
+{
+    font-size: 16px;
+    padding-bottom: 5px;
+    color: #aa6c39;
+}
+#goal .goal-text .contents .content p
+{
+    color: black;
+}
+#goal .goal-text .contents .content i
+{
+    color: goldenrod;
+}
+
+/* Portfolio Section Styling */
+#portfolio 
+{
+    background: #0A2940;
+}
+.portfolio h1
+{
+    color: #95A2BB;
+    font-size: 30px;
+    padding-bottom: 20px;
+    margin-left: 20px;
+}
+.portfolio h4
+{
+    color: #95A2BB;
+    font-size: 14px;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+}
+.portfolio h2
+{
+    font-size: 40px;
+    font-weight: 600;
+    color: #95A2BB;
+    margin-bottom: 20px;
+}
+.portfolio h2 span
+{
+    font-weight: 500px;
+}
+.portfolio p
+{
+    color: #95A2BB;
+    line-height: 1.6;
+    margin-bottom: 100px;
+}
+.owl-carousel .item img
+{
+    display: flex;
+    justify-content: space-between;
+    width: 700px;
+    height: 300px;
+    border: 1px solid #95A2BB;
+    object-fit: cover;
+}
+.owl-dots
+{
+    text-align: center;
+    margin-top: 20px;
+}
+.owl-dot
+{
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    outline: none !important;
+    border-radius: 50%;
+    border: 2px solid goldenrod !important;
+    transition: all 0.8s ease;
+}
+.owl-dot.active
+{
+    width: 35px;
+    border-radius: 14px;
+    transition: all 0.8s ease;
+    transform: scale();
+}
+.owl-dot.active,
+.owl-dot:hover
+{
+    background: gold !important;
+}
+
+/*** Open-ended Fund Management Teams Section  ***/
+#teams .first-block
+{
+    margin: -50px 0 75px 50px;  /* margin: top right bottom left */
+    font-weight: 10000;
+}
+#teams .second-block
+{
+    margin: 50px;
+}
+#teams h3
+{
+    color: #0A2940;
+    font-size: 14px;
+    padding: 20px;
+    text-transform: uppercase;
+}
+#teams h2
+{
+    font-size: 40px;
+    font-weight: 600;
+    color: #0A2940;
+    margin-bottom: 20px; 
+}
+#teams h2 span
+{
+    font-weight: 500;
+}
+#teams p
+{
+    color: #0A2940;
+    line-height: 1.6;
+    margin-bottom: 100px;
+}
+#teams .wrapper .card
+{
+    margin: 20px;
+    display:flex;
+    flex-direction: column;
+    background-color: goldenrod;
+    border-radius: 10px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+    overflow: hidden;
+    width: 200px;
+    z-index: 1;
+    transition: all 0.5s ease;
+}
+#teams .wrapper .card:hover
+{
+    background: gold;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+#teams .wrapper .card-items
+{
+    display: flex;
+    margin-top: -50px;
+    justify-content: space-evenly;  /* Every .card is spaced evenly in row*/
+    overflow: hidden;
+}
+#teams .wrapper .card .card-header
+{
+    display: inline-block;
+    width: 180px;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 30px auto;
+    transform: translateY(40px);
+}
+#teams .wrapper .card .card-header img
+{
+    width: 100%;
+    height: 100%;
+}
+#teams .wrapper .card-body
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-height: 200px;
+}
+#teams .wrapper .card h3
+{
+    font-size: 12px;
+    color: black;
+    padding-top: 30px;
+}
+#teams .wrapper .card .card-body h4
+{
+    font-size: 15px;
+    font-weight: 600;
+    color: black;
+    margin-top: 0px;
+}
+#teams .wrapper .card .card-body ul
+{
+    display: flex;
+    list-style: none;
+    padding-top: 50px;
+}
+#teams .wrapper .card .card-body ul li i
+{
+    padding: 5px;
+    margin: 0 7px;
+    border: 1px solid white;
+    border-radius: 50%;
+    background: gold;
+    color: black;
+    /* transition: all 0.3s ease; */
+}
+#teams .wrapper .card .card-body ul li i:hover
+{
+    background: goldenrod;
+    color: whitesmoke;
+}  /* End of FIRST BLOCK */
+#teams .blockade .block-items
+{
+    display: flex;
+    justify-content: space-evenly;
+}
+#teams .blockade .block 
+{
+    margin: 20px;
+    display:flex;
+    flex-direction: column;
+    background-color: rgba(218,165,32,0.1);
+    outline-style: auto;
+    outline-color: rgba(0,0,0,0);
+    border-radius: 10px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+    overflow: hidden;
+    width: 250px;   
+    height: 250px;
+    z-index: 1;
+    transition: all 0.5s ease;
+}
+#teams .blockade .block:hover
+{
+    background-color: rgba(255,215,0,0.6);
+    box-shadow: 0 4px 25px rgba(0,0,0,0.6);
+    outline-color: rgba(0,0,0,1);
+    transform: scale(1.05);
+}
+#teams .blockade .block .block-header
+{
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+#teams .blockade .block .block-header i
+{
+    font-size: 80px;
+    color: gold;
+}
+#teams .blockade .block-body
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-height: 200px;
+}
+#teams .blockade .block-body p
+{
+    font-size: 25px;
+    color: black;  
+}
+
+/* Footer Section Styling */
+.footer-bottom
+{
+    background: #0A2940;
+    color: gold;
+}
+.footer-bottom p
+{
+    font-size: 14p;
+    font-weight: 600;
+}

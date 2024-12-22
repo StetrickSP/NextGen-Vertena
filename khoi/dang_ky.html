@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertena | Đăng Ký</title>
+    <link rel="stylesheet" href="dang_ky.css">
+    <link rel="icon" href="/images/brand.png">
+</head>
+<body>
+    <div class="vien">
+    <div class="login">
+        <form name='form-signup' id="signup-form">
+            <a href="/index.html" class="brand-left"><img src="/images/brand.png" width="45px" height="45px">Vertena</a>
+            <h1>ĐĂNG KÝ </h1>
+    
+            <label for="signup-email">Email</label>
+            <input type="email" id="signup-email" placeholder="Username" required >
+    
+            <label for="signup-pw">Mật Khẩu</label>
+            <input type="password"
+                   id= "signup-pw"
+                   placeholder="Password" required>
+            <input id="rgstr_btn" type="submit" value="Đăng ký" onclick="store()">
+            <!-- <input id="rgstr_btn" type="submit" value="Login" onclick="window.location.href = 'dang_nhap.html'"> -->
+            <h3>Đã có tài khoản rồi? <a href="dang_nhap.html">Đăng nhập</a></h3>
+        </form>
+    </div>
+    </div>
+<!-------------------- JavaScript -------------------->
+<script src="config.js" type="module"></script>
+<script type="module">
+    //------------------------------ FireBase Initialization ----------------------------------------//
+    const firebaseConfig =
+    {
+        apiKey: "AIzaSyA3IqTDaawY2ukrU9iCmpbp7JvGIIggMw4",
+        authDomain: "verthena-c0a09.firebaseapp.com",
+        projectId: "verthena-c0a09",
+        storageBucket: "verthena-c0a09.appspot.com",
+        messagingSenderId: "935519340983",
+        appId: "1:935519340983:web:8354d553410ff6a6898032",
+        measurementId: "G-SXBK6V54DC"
+    };
+    ///Import cac cau hinh Firebase
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-analytics.js";
+    import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js';
+    ///Khoi Dong Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    //------------------------------ FireBase Initialization ----------------------------------------//
+
+
+    ///Event Listener khi dang ky bieu mau
+    var signupForm = document.getElementById('signup-form');
+    signupForm.addEventListener('submit', function (e)
+    {
+        e.preventDefault();
+        var email = document.getElementById('signup-email').value;
+        var password = document.getElementById('signup-pw').value;
+
+        //Tao tk bang Firebase 
+        createUserWithEmailAndPassword(getAuth(), email, password)
+           .then(function (userCredential)
+           {
+            var user = userCredential.user;
+            alert("Đã tạo tài khoản: " + user.email);
+            window.location.href = "dang_nhap.html"; //Chuyen huong khi da tao tk 
+           })
+           .catch(function (error)
+           {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            console.log("Loi dang ky: " + errorMessage);
+            errorMessage.textContent = errorMessage;
+           })
+    });
+</script>
+<script src="dang_ky.js"></script>
+</body>
+</html>

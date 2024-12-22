@@ -1,0 +1,135 @@
+/* dang_nhap.css */
+*
+{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+.vien {
+    background-color: #FFFFF4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6)
+    ,rgba(0,0,0,0.6))
+    ,url('/images/background.jpg') no-repeat center center/cover;
+}
+
+.login {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    margin-top: 50px; /* Đã thêm để căn giữa form */
+}
+.login a
+{
+    color: gold;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+form {
+    text-align: left; /* Đã thêm để căn trái nội dung form */
+}
+
+img {
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+label, input {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box; /* Đã thêm */
+}
+
+#remember {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+#rememberMe {
+    display: inline-block;
+}
+
+label[for="rememberMe"] {
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 10px;
+    color: #333;
+}
+
+#login_btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#login_btn:hover {
+    background-color: #45a049;
+}
+
+
+
+/* .vien{
+    background-color: black;
+   margin-top: 100px;
+   padding-bottom: 100px;
+  margin-inline: 550px;
+  border-radius:10px;
+}
+.login{
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    color: whitesmoke;
+    
+}
+input{
+    display: flex;
+    justify-self: baseline;
+    border:10px solid transparent;
+    border-radius:10px;
+    padding:5px;
+    
+}
+text{
+    font-size: 200px;
+    
+}
+body{
+    background-color: gold;
+}
+h1{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+} */

@@ -1,0 +1,168 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/************************!   Class: Container   **********************/
+.container
+{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, rgba(255, 192, 0, 0.9), #aa6b39);
+    padding: 10px;
+}
+
+.advices                   /***************   Class: advices / It is the whole Task List box   *****************/
+{
+    display: inline-block;
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px 30px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;  /* Decorates the border */
+}
+.advices h2
+{
+    color: #aa6b39;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.advices h2 img
+{
+    margin-left: 10px;
+    height: 50px;
+    width: 50px;
+}                          /***************   Class: advices   *****************/
+
+.advice-list               /*************!   Class: advice-list / It is the list next to Task list   *************/
+{
+    display: inline-table;
+    position: absolute;
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px 50px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;  /* Decorates the border */
+}
+.advice-list h2
+{
+    color: #aa6b39;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.advice-list h2 img
+{
+    margin-left: 10px;
+    height: 50px;
+    width: 50px;
+}                         /***************   Class: advice-list   !***************/
+#advice-container li
+{
+    list-style: none;
+    font-size: 20px;
+    padding-left: 20px;
+}
+#advice-container a
+{
+    text-decoration: none;
+}
+#advice-container a:hover
+{
+    text-decoration: underline;
+}
+
+.row               /******************! Class: Row / It is the input Task box & the Add button  ******************/
+{
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;   /*Remove the sharp corners*/
+    padding-left: 20px;
+    margin-bottom: 25px;
+}                  /****************** Class: Row !*********************/
+
+input
+{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+}
+
+button
+{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: goldenrod;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer; 
+    border-radius: 40px;
+    transition: all 0.5s ease;
+}
+button:hover
+{
+    background: gold;
+}
+
+#list-container li
+{
+    list-style: none; 
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+#list-container li::before
+{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px; 
+    border-radius: 50%; 
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+#list-container li.checked
+{
+    color: #555;
+    text-decoration: line-through;
+}
+#list-container li.checked::before
+{
+    background-image: url(images/checked.png);
+}
+#list-container li span
+{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+}
+#list-container li span:hover
+{
+    background: #edeef0;
+}
+
+/************************   Class: Container   !**********************/

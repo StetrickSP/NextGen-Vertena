@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Advice | Verthena</title>
+    <link rel="icon" href="/images/brand.png">
+    <link rel="stylesheet" href="boxicons-2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="nav-bar.css">
+    <link rel="stylesheet" href="advice.css">
+</head>
+<body>
+    <!--------------------------------------- Showcase Bar -------------------------------------->
+    <div class="showcase">
+        <!-- Top navbar section  -->
+        <div class="navbar-top">
+            <ul class="left">
+                <li><a href="#">Vietnam</a></li>
+                <li><a href="#"><i class="bx bxs-time bx-xs"></i>Thứ Hai - Thứ Sáu: 8h - 10h sáng</a></li>
+                <li><a href="#"><i class="bx bxs-map bx-xs"></i>297 Điện Biên Phủ</a></li>
+                <li><a href="#"><i class="bx bxs-phone bx-xs"></i>+84-767-139-786</a></li>
+            </ul>
+            <ul class="right">
+                <li><a href="#"><i class="bx bxl-twitter bx-xs"></i></a></li>
+                <li><a href="#"><i class="bx bxl-facebook bx-xs"></i></a></li>
+                <li><a href="#"><i class="bx bxl-instagram bx-xs"></i></a></li>
+                <li><a href="#"><i class="bx bxl-pinterest bx-xs"></i></a></li>
+            </ul>
+        </div>
+        <!-- Bottom navbar section -->
+        <div class="navbar-bottom">
+            <a href="index.html" class="brand-left"><img src="images/brand.png" width="45px" height="45px">Vertena</a>
+            <ul class="menu-right">
+                <li><a href="index.html">Trang Chủ</a></li>
+                <li><a href="index.html#services">Dịch Vụ</a></li>
+                <li><a href="index.html#portfolio">Đội Ngũ</a></li>
+                <li><a href="#">Danh Mục</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="/khoi/dang_ky.html"><i class="bx bxs-user-circle bx-xs"></i>Đăng nhập/Đăng ký</a></li>
+            </ul>
+            </div>
+        </div>
+    <!--------------------------------------- Showcase Bar ------------------------------------!-->
+    <div class="container">  <!--------   Class: Container   ------------->
+        <div class="advices">
+            <h2><img src="/images/brand.png">Danh sách việc cần làm <img src="/images/icon-todoList.png"></h2>
+            <div class="row">
+                <input type="text" id="input-box" placeholder="Nhập việc ở đây">
+                <button onclick="addTask()">Thêm</button>
+            </div>
+            <ul id="list-container">
+                <!--
+                <li> tags will be added here via Javascript
+                <li class="checked"></li>                    ///Checked 
+                <li></li>                                    ///Unchecked
+                -->
+            </ul>
+        </div>
+
+        <div class="advice-list">
+            <h2><img src="/images/brand.png">Các lời khuyên tài chính<img src="/images/icon-adviceHand.png"></h2>
+            <!-- <div class="row">
+                <h1>Financial Tips  
+            </div> -->
+            <ul id="advice-container">
+                <li><a href="#">Tháp Tài sản là gì?</a></li>
+                <li><a href="#">Cách tiết kiệm chi tiêu</a></li>
+                <li><a href="#">Lời khuyên cải thiện tình hình tài chính</a></li>
+                <li><a href="#">Lãi kép là gì, mà Einstein cũng khen?</a></li>
+            </ul>
+        </div>
+    </div>   <!---------------   Class: Container   ---------------------->
+    <script src="advice.js"></script>
+</body>
+</html>

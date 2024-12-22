@@ -1,0 +1,264 @@
+body{
+    background-color: whitesmoke;
+}
+.mc{
+    position: relative;
+    background: #aa6b39;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-left: 20px;
+    
+}
+.hw{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 2%;
+    padding: 10px 2rem;
+   
+}
+.ui{
+    display: flex;
+    align-items: center;
+    gap: 1;
+}
+.sb{
+    background: goldenrod;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 12px;
+    margin-right: 20px;
+    margin-right: 20px;
+}
+.sb input{
+    background: gold;
+    padding:10px;
+    outline: none;
+    border: none;
+}
+.sb i{
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0,5s ease-out;
+ 
+}
+.sb i:hover{
+    transform: scale(1.2);
+}
+h1{
+    color: goldenrod;
+}
+h2{
+    color: gold;
+    font-size: 40px;
+}
+h3{
+    color: gold;
+}
+i{
+    color: gold;
+}
+.cc{
+    background-color: #aa6b39;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    
+}
+.cw{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+}
+span{
+    color: gold;
+    font-size: 30px;
+}
+.mt{
+    padding-bottom: 10px;
+    font-size: 35px;
+    color: gold;
+}
+
+.pc{
+    background-color: green;
+    border-radius: 10px;
+    padding: 1.2rem;
+    width: 290px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.5s ease-in-out;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.cw2{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+}
+
+.mt2{
+    padding-bottom: 10px;
+    font-size: 35px;
+}
+
+.pc2{
+    background-color: red;
+    border-radius: 10px;
+    padding: 1.2rem;
+    width: 290px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.5s ease-in-out;
+}
+.cw3{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+}
+
+.mt3{
+    padding-bottom: 10px;
+    font-size: 35px;
+}
+
+.pc3{
+    background-color: blue;
+    border-radius: 10px;
+    padding: 1.2rem;
+    width: 290px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.5s ease-in-out;
+}
+.cw4{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+}
+
+.mt4{
+    padding-bottom: 10px;
+    font-size: 35px;
+}
+
+.pc4{
+    background-color: purple;
+    border-radius: 10px;
+    padding: 1.2rem;
+    width: 290px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.5s ease-in-out;
+}
+.ch{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.amount{
+    display: flex;
+    flex-direction: column;
+}
+.ch2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.amount2{
+    display: flex;
+    flex-direction: column;
+}
+.ch3{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.amount3{
+    display: flex;
+    flex-direction: column;
+}
+.ch4{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.amount4{
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    font-size: 25px;
+}
+.av{
+   font-size: 35px;
+   padding-top: 3rem;
+}
+
+.tw{
+    background-color: #aa6b39;
+    margin-top: 1rem;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 10px;
+    padding: 2rem;
+}
+.tc{
+    width: 100%;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+thead{
+    background: goldenrod;
+    color: black;
+}
+th{
+    padding: 15px;
+    text-align: left;
+    font-size: 20px;
+}
+td{
+    padding: 15px;
+    font-size: 20px;
+    color: gold;
+}
+tr:nth-child(even) {
+    background: goldenrod;
+}
+tfoot{
+    background: goldenrod;
+    font-weight: bold;
+    color: #fff;
+}
+tfoot td{
+    padding: 15px;
+}
+.tc button{
+    color: black;
+    background: none;
+    cursor: pointer;
+}

@@ -1,0 +1,64 @@
+.text-center
+{
+    text-align: center;
+    margin-top: 15px;
+}
+
+.container
+{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, rgba(255, 192, 0, 0.9), #aa6b39);
+    padding: 10px;
+}
+
+.courses-content
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    gap: 1rem;
+    align-items: center;
+    margin-top: 4rem;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.row
+{
+    padding-bottom: 10px;
+    border-radius: 20px;
+    background-color: linear-gradient(135deg, rgba(255, 192, 0, 0.9), #aa6b39);
+    box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.2);
+    transition: all .40s ease;
+}
+.row:hover
+{
+    transform: scale(1.05);
+}
+.row img
+{
+    margin-left: 40px;
+}
+
+.btn
+{
+    display: inline-block;
+    padding: 15px 25px;
+    margin-left: 500px;
+    margin-right: 30px;
+    margin-top: 10px;
+    text-decoration: none;
+    border-radius: 25px;
+    color: white;
+    background: linear-gradient(to right, #aa6b39, gold);
+    font-size: 12px;
+    font-weight: bold;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    /* outline-style: solid; */
+}
+.btn:hover
+{
+    color: gold;
+    transform: scale(1.05);
+}
