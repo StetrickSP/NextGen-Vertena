@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses | Vertena</title>
+    <link rel="icon" href="/images/brand.png">
+    <link rel="stylesheet" href="/boxicons-2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="/nav-bar.css">
+    <link rel="stylesheet" href="/Courses/courses.css">
+</head>
+<body>
+    <!--------------------------------------- Showcase Bar -------------------------------------->
+    <div class="showcase">
+        <!-- Top navbar section  -->
+        <div class="navbar-top">
+            <ul class="left">
+                <li><a href="#">Vietnam</a></li>
+                <li><a href="#"><i class="bx bxs-time bx-xs"></i>Thứ Hai - Thứ Sáu: 8h - 10h sáng</a></li>
+                <li><a href="#"><i class="bx bxs-map bx-xs"></i>297 Điện Biên Phủ</a></li>
+                <li><a href="#"><i class="bx bxs-phone bx-xs"></i>+84-767-139-786</a></li>
+            </ul>
+            <ul class="right">
+                <li><a href="#"><i class="bx bxl-twitter bx-xs"></i></a></li>
+                <li><a href="#"><i class="bx bxl-facebook bx-xs"></i></a></li>
+                <li><a href="#"><i class="bx bxl-instagram bx-xs"></i></a></li>
+                <li><a href="#"><i class="bx bxl-pinterest bx-xs"></i></a></li>
+            </ul>
+        </div>
+        <!-- Bottom navbar section -->
+        <div class="navbar-bottom">
+            <a href="/index.html" class="brand-left"><img src="/images/brand.png" width="45px" height="45px">Vertena</a>
+            <ul class="menu-right">
+                <li><a href="/index.html">Trang Chủ</a></li>
+                <li><a href="/index.html#services">Dịch Vụ</a></li>
+                <li><a href="/index.html#portfolio">Đội Ngũ</a></li>
+                <li><a href="#">Danh Mục</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="/khoi/dang_ky.html"><i class="bx bxs-user-circle bx-xs"></i>Đăng nhập/Đăng ký</a></li>
+            </ul>
+            </div>
+        </div>
+    <!--------------------------------------- Showcase Bar ------------------------------------!-->
+
+    <div class="container">
+        <div class="text-center">
+            <h4>CÁC KHÓA HỌC</h4>
+            <h1>TÀI CHÍNH</h1>
+        </div>
+
+        <h1>Add Course</h1>
+        <form id="addCourse">
+            <input type="text" id="courseName" placeholder="Course Name" required><br><br>
+            <input type="number" id="coursePrice" placeholder="Price" required><br><br>
+            <textarea id="courseDescription" placeholder="Description" required></textarea><br><br>
+            <input type="file" id="imageUpload" accept="image/*"><br><br>
+            <button type="submit">Add Apartment</button>
+        </form>
+
+        <div class="courses-content" id="courseList">
+            <div class="row">
+                <img src="https://tradebrains.in/wp-content/uploads/2021/12/Minimum-Amount-For-Trading-in-india-2023-Cover-Image-1080x675.jpg" height="200px" width="320px">
+                <div class="courses-text">
+                    <h5>200,000đ</h5>
+                    <h3>Khóa học Trading dành cho người mới!</h3>
+                    <h6>Thời gian: 5 Tiếng 15 phút</h6>
+                    <div class="rating">
+                        <div class="star">
+                            <a href=""><i class="bx bxs-star"></i></a>
+                            <a href=""><i class="bx bxs-star"></i></a>
+                            <a href=""><i class="bx bxs-star"></i></a>
+                            <a href=""><i class="bx bxs-star"></i></a>
+                            <a href=""><i class="bx bxs-star"></i></a>
+                        </div>
+                        <div class="review">
+                            <p>{5 reviews}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        <!-- <div class="main-btn">
+            <a href="#" class="btn">MUA NGAY</a>
+        </div> -->
+    </div>
+    <!-- Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+    <script src="/Courses/courses.js"></script>
+</body>
+</html>
