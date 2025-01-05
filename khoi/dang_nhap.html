@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,81 +8,34 @@
     <link rel="icon" href="/images/brand.png">
     <link rel="stylesheet" href="dang_nhap.css">
 </head>
+
 <body>
     <div class="vien">
-    <div class="login">
-        <form name='form-login' id="login-form">
-            <a href="/index.html" class="brand-left"><img src="/images/brand.png" width="45px" height="45px">Vertena</a>
-    
-            <h1>ĐĂNG NHẬP</h1>
-    
-            <label for="userName">Email</label>
-            <input type="email" id="login-email" placeholder="Username" required>
-    
-            <label for="userPw">Mật Khẩu</label>
-            <input type="password" id= "login-pw" placeholder="Password" required>
-    
-            <div id="remember">
+        <div class="login">
+            <div id="login-form">
+                <a href="/index.html" class="brand-left"><img src="/images/brand.png" width="45px"
+                        height="45px">Vertena</a>
 
-            </div>
-    
-            <input id= "login_btn" type="submit" value="Login" onclick="check()">
-            <!-- <input id= "login_btn" type="submit" value="Register" onclick="window.location.href = 'dang_ky.html'">
+                <h1>ĐĂNG NHẬP</h1>
+
+                <label for="userName">Email</label>
+                <input type="email" id="login-email" placeholder="Username" required>
+
+                <label for="userPw">Mật Khẩu</label>
+                <input type="password" id="login-pw" placeholder="Password" required>
+
+                <div id="remember">
+
+                </div>
+
+                <button id="login_btn">Dang Nhap</button>
+                <!-- <input id= "login_btn" type="submit" value="Register" onclick="window.location.href = 'dang_ky.html'">
             -->
-            <h3>Chua co tai khoan? <a href="dang_ky.html">Register</a></h3>
-        </form>
+                <h3>Chua co tai khoan? <a href="dang_ky.html">Register</a></h3>
+            </div>
+        </div>
     </div>
-<!---------------------------------------  JavaScript  ------------------------------------------>
-<!-- <script src="dang_nhap.js"></script> -->
-<!-- <script src="/config.js"></script> -->
-<script type="module">
-    //------------------------------ FireBase Initialization ----------------------------------------//
-    const firebaseConfig =
-    {
-        apiKey: "AIzaSyA3IqTDaawY2ukrU9iCmpbp7JvGIIggMw4",
-        authDomain: "verthena-c0a09.firebaseapp.com",
-        projectId: "verthena-c0a09",
-        storageBucket: "verthena-c0a09.appspot.com",
-        messagingSenderId: "935519340983",
-        appId: "1:935519340983:web:8354d553410ff6a6898032",
-        measurementId: "G-SXBK6V54DC"
-    };
-    ///Import cac cau hinh Firebase
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-analytics.js";
-    import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js';
-    ///Khoi Dong Firebase
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
-    //------------------------------ FireBase Initialization ----------------------------------------//
-
-
-    //Event Listener khi Login
-    var loginForm = document.getElementById('login-form');
-    loginForm.addEventListener('submit', function (e)
-    {
-        e.preventDefault();
-        var email = document.getElementById('login-email').value;
-        var password = document.getElementById('login-pw').value;
-
-        //Login bang Firebase
-        signInWithEmailAndPassword(getAuth(), email, password)
-           .then(function (userCredential)
-           {
-            var user = userCredential.user;
-            alert('Đăng nhập thành công: ' + user.email)
-            window.location.href = '/index.html'; 
-           })
-           .catch(function (error)
-           {
-                // Xử lý lỗi đăng nhập
-                var errorCode = error.code;
-                var errorMessage = error.message;
-                alert('Lỗi đăng nhập: ' + errorMessage);
-                errorMessage.textContent = errorMessage;
-           });
-    });
-</script>
-</div>  
+    <script src="dang_ky.js"></script>
 </body>
+
 </html>
