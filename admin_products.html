@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Display</title>
+    <link rel="stylesheet" href="./admin_products.css">
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="./admin_products.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Product List</h1>
+        <button id="addProductBtn">Add Product</button>
+        <div id="productList"></div>
+    </div>
+    <div id="productForm" class="form-popup">
+        <form id="productFormContent">
+            <h2>Add/Edit Product</h2>
+            <label for="productName">Name</label>
+            <input type="text" id="productName" required>
+            <label for="productPrice">Price</label>
+            <input type="number" id="productPrice" required>
+            <label for="productDescription">Description</label>
+            <textarea id="productDescription" required></textarea>
+            <label for="productImages">Images</label>
+            <input type="file" id="productImages" multiple>
+            <button type="submit">Save</button>
+            <button type="button" id="cancelBtn">Cancel</button>
+        </form>
+    </div>
+
+    <script type="module">
+        import { pwd_admin_products } from './admin_pwdConfig.js'
+
+        // Hiển thị khung nhập mật khẩu
+        const userPassword = prompt("Vui lòng nhập mật khẩu để truy cập:");
+
+        if (userPassword === pwd_admin_products) {
+            // Hiển thị nội dung nếu mật khẩu đúng
+            document.body.style.display = "block";
+        } else {
+            alert("Rất tiếc trang này bạn không có quyền truy cập!!!")
+            window.location.href = '/index.html'
+        }
+    </script>
+</body>
+
+</html>

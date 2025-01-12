@@ -1,13 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Admin Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #74ebd5, #acb6e5);
+        }
+
+        .dashboard-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 80%;
+            max-width: 1200px;
+            padding: 20px;
+        }
+
+        .dashboard-button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 200px;
+            height: 200px;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .dashboard-button:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .dashboard-button img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 15px;
+        }
+
+        .dashboard-button span {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Animation */
+        .dashboard-button {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+    </style>
 </head>
+
 <body>
-    <div>
-        Welcome to admin dashboard!
+    <div class="dashboard-container">
+        <!-- Account User Button -->
+        <div class="dashboard-button" onclick="window.location.href = 'account-user.html'">
+            <img src="https://static-00.iconduck.com/assets.00/user-2-account-icon-2048x2046-oucjsuyg.png"
+                alt="Account Icon">
+            <span>Account User</span>
+        </div>
+
+        <!-- List Product Button -->
+        <div class="dashboard-button" onclick="window.location.href = '/admin_products.html'">
+            <img src="https://cdn-icons-png.flaticon.com/512/1311/1311095.png" alt="Product Icon">
+            <span>List Product</span>
+        </div>
     </div>
+
+
+    <script type="module">
+        import { pwd_admin_dashboard } from './admin_pwdConfig.js'
+
+        // Hiển thị khung nhập mật khẩu
+        const userPassword = prompt("Vui lòng nhập mật khẩu để truy cập:");
+
+        if (userPassword === pwd_admin_dashboard) {
+            // Hiển thị nội dung nếu mật khẩu đúng
+            document.body.style.display = "flex";
+        } else {
+            alert("Rất tiếc trang này bạn không có quyền truy cập!!!")
+            window.location.href = '/index.html'
+        }
+    </script>
+
 </body>
+
 </html>
