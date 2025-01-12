@@ -5,14 +5,15 @@ import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/fireb
 
 //------------------------------ FireBase Initialization ----------------------------------------//
 const firebaseConfig = {
-    apiKey: "AIzaSyD2YVKQ7PYpJpAbiBuY2MHbjbPseajnTHg",
-    authDomain: "finalnextgen.firebaseapp.com",
-    databaseURL: "https://finalnextgen-default-rtdb.firebaseio.com",
-    projectId: "finalnextgen",
-    storageBucket: "finalnextgen.firebasestorage.app",
-    messagingSenderId: "922615992897",
-    appId: "1:922615992897:web:cd3e306aeeca7a2483ecc0"
-};
+    apiKey: "AIzaSyA3IqTDaawY2ukrU9iCmpbp7JvGIIggMw4",
+    authDomain: "verthena-c0a09.firebaseapp.com",
+    databaseURL: "https://verthena-c0a09-default-rtdb.firebaseio.com",
+    projectId: "verthena-c0a09",
+    storageBucket: "verthena-c0a09.firebasestorage.app",
+    messagingSenderId: "935519340983",
+    appId: "1:935519340983:web:8354d553410ff6a6898032",
+    measurementId: "G-SXBK6V54DC"
+  };
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);

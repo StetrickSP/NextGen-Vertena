@@ -1,13 +1,14 @@
 // Initialize Firebase
 const firebaseConfig = {
-    apiKey: "AIzaSyADCfZre9b4Rh2Ma-QcH47ynTUmHGcyZmc",
-    authDomain: "genmindx.firebaseapp.com",
-    databaseURL: "https://genmindx-default-rtdb.firebaseio.com",
-    projectId: "genmindx",
-    storageBucket: "genmindx.firebasestorage.app",
-    messagingSenderId: "776499388113",
-    appId: "1:776499388113:web:3da811b17c53f7924baff0"
-};
+    apiKey: "AIzaSyA3IqTDaawY2ukrU9iCmpbp7JvGIIggMw4",
+    authDomain: "verthena-c0a09.firebaseapp.com",
+    databaseURL: "https://verthena-c0a09-default-rtdb.firebaseio.com",
+    projectId: "verthena-c0a09",
+    storageBucket: "verthena-c0a09.firebasestorage.app",
+    messagingSenderId: "935519340983",
+    appId: "1:935519340983:web:8354d553410ff6a6898032",
+    measurementId: "G-SXBK6V54DC"
+  };
 firebase.initializeApp(firebaseConfig);
 const database = firebase.database();
 
